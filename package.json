@@ -1,0 +1,19 @@
+{
+  "name": "Riotjs",
+  "version": "0.0.0",
+  "description": "Riotjs for Egghead",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timkindberg/riot-js-egghead.git"
+  },
+  "author": "Tim Kindberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timkindberg/riot-js-egghead/issues"
+  },
+  "homepage": "https://github.com/timkindberg/riot-js-egghead",
+  "scripts": {
+    "start": "browser-sync start --server --files './*.*' --no-inject-changes --no-notify --no-ui"
+  }
+}
