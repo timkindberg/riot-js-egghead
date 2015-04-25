@@ -10,11 +10,38 @@
 
 <ingredient>
 
-  <label>
+  <label class="{ added: added }">
     <input type="checkbox" onchange="{ onCheck }"/>
     { opts.name }
   </label>
   <span>{ opts.amount }</span>
+
+  <style scoped>
+    :scope {
+      margin-bottom: 10px;
+      display: block;
+      overflow: auto;
+      padding: 10px;
+      background-color: #eee;
+    }
+
+    input {
+      position: relative;
+      top: -2px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    label.added {
+      text-decoration: line-through;
+    }
+
+    span {
+      float: right;
+    }
+  </style>
 
   <script>
     this.onCheck = function(e){
