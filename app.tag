@@ -2,9 +2,25 @@
 
   <h2>Rice Krispie Treats Recipe</h2>
 
-  <ingredient name="Butter" amount="3 Tbsp"></ingredient>
-  <ingredient name="Marshmallow Fluff" amount="10 oz"></ingredient>
-  <ingredient name="Rice Krispies Cereal" amount="6 cups"></ingredient>
+  <ingredient each="{ key, val in ingredObj }" name="{ key }" amount="{ val }"></ingredient>
+
+  <script>
+    this.ingredients = [
+      {name: 'Butter', amount: '3 Tbsp'},
+      {name: 'Marshmallow Fluff', amount: '10 oz'},
+      {name: 'Rice Krispies Cereal', amount: '6 cups'}
+    ]
+
+    this.ingredObj = {
+      "Butter": 3,
+      "Marshmallow": 5,
+      "Cereal": 10
+    }
+
+    this.onClick = function(e){
+      console.log("clicked: ", e.item)
+    }
+  </script>
 
 </app>
 
